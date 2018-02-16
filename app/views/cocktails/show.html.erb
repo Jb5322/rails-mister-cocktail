@@ -4,10 +4,7 @@
   <h3> <%= @cocktail.description %> </h3>
 
   <ul> <% @cocktail.doses.each do |dose| %>
-    <li class="color"> <%= dose.ingredient.name %>||<%= dose.description %> - <%= link_to "Delete", cocktail_dose_path(@cocktail,dose),
-            method: :delete,
-            data: { confirm: "Are you sure?" },
-            class: "btn btn-danger" %> </li>
+    <li class="color"> <%= dose.ingredient.name %>  -  <%= dose.description %>  -  <%= link_to cocktail_dose_path(@cocktail,dose), method: :delete do %><i class="far fa-trash-alt"></i><% end %> </li>
     <% end %>
   </ul>
 </div>

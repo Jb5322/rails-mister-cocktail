@@ -17,6 +17,11 @@ class CocktailsController < ApplicationController
     redirect_to(new_cocktail_dose_path(@cocktail.id))
   end
 
+  def destroy
+    @task.destroy
+    redirect_to tasks_path
+  end
+
   private
 
   def cocktail_params
