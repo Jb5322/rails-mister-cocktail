@@ -1,0 +1,45 @@
+<div class="front">
+  <div class="index_image" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1511318042200-2bf4c8f20ca5?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1600&h=900&fit=crop&s=1c8f9be9d6ea152a7eb864a63bb394b0');">
+    <div class="index_title">
+      <a name="scroll"></a>
+      <a href="#scroll"><i class="fas fa-angle-double-down"></i></a>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <h2 class="text-center">These are all the Cocktails:</h2>
+  <p class="text-center color"><%= link_to 'ADD YOUR OWN COCKTAIL', new_cocktail_path %></p>
+  <br>
+  <div class="cards">
+    <% @cocktails.each do |cocktail| %>
+    <%= link_to cocktail_path(cocktail) do %>
+    <div class="card">
+      <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('https://source.unsplash.com/1600x900/?cocktail');">
+        <span class="card-category"><%= cocktail.name %></span>
+        <div class="card-description">
+        <span><%= cocktail.description %></span>
+        </div>
+      </div>
+      <div class="card-footer">
+        <p>More Information</p>
+        <div class="controls">
+          <a href="#"><i class="fa fa-star"></i></a>
+          <a href="#"><i class="fa fa-heart"></i></a>
+          <a href="#"><i class="fa fa-share"></i></a>
+        </div>
+      </div>
+    </div>
+    <% end %>
+    <% end %>
+    <div id="adding" class="card">
+      <%= link_to new_cocktail_path do %>
+      <i class="fas fa-plus"></i>
+      <% end %>
+    </div>
+  </div>
+</div>
+<a href="#scroll"></a>
+
+

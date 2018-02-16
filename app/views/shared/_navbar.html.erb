@@ -1,0 +1,19 @@
+<div class="navbar-wagon">
+  <!-- Logo -->
+  <%= link_to root_path, class: "navbar-wagon-brand" do %>
+    <%= image_tag "https://d30y9cdsu7xlg0.cloudfront.net/png/100531-200.png" %>
+  <% end %>
+
+    <!-- Right Navigation -->
+  <div class="navbar-wagon-right hidden-xs hidden-sm">
+    <div class="nav_links">
+    <!-- Links -->
+      <%= link_to "Home", root_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Cocktails", cocktails_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Favorites", pages_favorites_path, class: "navbar-wagon-item navbar-wagon-link" %>
+    </div>
+    <%= link_to root_path, class: "navbar-wagon-brand" do %>
+    <%= image_tag "https://d30y9cdsu7xlg0.cloudfront.net/png/100531-200.png" %>
+  <% end %>
+  </div>
+</div>

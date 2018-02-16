@@ -1,0 +1,119 @@
+// Specific CSS for your home-page
+body {
+  margin: 0;
+  margin-bottom: 0px;
+  font-family: 'Varela Round', sans-serif;
+  background-color: #292A2B;
+}
+.text-center {
+  text-align: center;
+}
+.container {
+  height: 500px;
+  max-width: 1000px;
+  margin: 50px auto;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #AEB0B3;
+}
+
+.back_home {
+  background-image: url("https://images.unsplash.com/photo-1506703248799-a1b1896290e8?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1600&h=900&fit=crop&s=8c2dee8c52f47e2594f0652491d58ee7");
+  background-attachment: fixed;
+  background-size: cover;
+  height: 850px;
+}
+.fluid {
+  padding-top: 300px;
+}
+
+
+.typed_wrap {
+  background-color: rgba(56,56,56,0.8);
+  display: block;
+  border: 4px solid #ecf0f1;
+  width: 400px;
+  height: 100px;
+  padding: 30px;
+
+  /*centers it in the .banner*/
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+.typed_wrap h1 {
+  display: inline;
+}
+
+/*Add custom cursor so it auto inherits font styles*/
+.typed::after {
+  content: '|';
+  display: inline;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite;
+}
+
+/*Removes cursor that comes with typed.js*/
+.typed-cursor{
+   opacity: 0;
+  display: none;
+}
+/*Custom cursor animation*/
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+.btns {
+  display: block;
+  width: 400px;
+  margin: 0;
+  padding: 30px 0 0 30px;
+}
+.btns a {
+  display: inline-block;
+  margin-left: 5px;
+}
+.btns a:first-child{margin-left:0}
+.btn {
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+}
+a .btn {
+  cursor: pointer;
+  border: 1.5px solid #ecf0f1;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 10px;
+  list-style-type: none;
+  transition: all .3s;
+}
+
+#banner-typed-text {
+  color: #A7ACB3;
+  font-size: 1.5em;
+  text-align: center;
+}
