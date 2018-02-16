@@ -14,14 +14,9 @@
   <div class="cards">
     <% @cocktails.each do |cocktail| %>
     <%= link_to cocktail_path(cocktail) do %>
-    <% unless cocktail.photo.blank? %>
     <div class="card">
-       <% p cocktail.photo %>
-      <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%=
-        cl_image_path cocktail.photo, height: 300, width: 400, crop: :fill %>);">
-        <% else %>
-        <div class="card" style="background-color: grey">
-          <% end %>
+      <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+         url('<%= cl_image_path cocktail.photo, height: 300, width: 400, crop: :fill %>')">
         <span class="card-category"><%= cocktail.name %></span>
         <div class="card-description">
         <span><%= cocktail.description %></span>
