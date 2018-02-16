@@ -1,7 +1,6 @@
 <div class="front">
   <div class="index_image" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1511318042200-2bf4c8f20ca5?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1600&h=900&fit=crop&s=1c8f9be9d6ea152a7eb864a63bb394b0');">
     <div class="index_title">
-      <a name="scroll"></a>
       <a href="#scroll"><i class="fas fa-angle-double-down"></i></a>
     </div>
   </div>
@@ -15,8 +14,14 @@
   <div class="cards">
     <% @cocktails.each do |cocktail| %>
     <%= link_to cocktail_path(cocktail) do %>
+    <% unless cocktail.photo.blank? %>
     <div class="card">
-      <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('https://source.unsplash.com/1600x900/?cocktail');">
+       <% p cocktail.photo %>
+      <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%=
+        cl_image_path cocktail.photo, height: 300, width: 400, crop: :fill %>);">
+        <% else %>
+        <div class="card" style="background-color: grey">
+          <% end %>
         <span class="card-category"><%= cocktail.name %></span>
         <div class="card-description">
         <span><%= cocktail.description %></span>
@@ -40,6 +45,7 @@
     </div>
   </div>
 </div>
-<a href="#scroll"></a>
+<div id="scroll"></div>
+<!-- <a href="#scroll"></a> -->
 
 

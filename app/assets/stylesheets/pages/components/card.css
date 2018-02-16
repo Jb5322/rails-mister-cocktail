@@ -20,7 +20,12 @@
 
 .card:hover {
   opacity: 1;
+  .card-description {
+    opacity: 0.8;
+    color: #C4D2E2;
+  }
 }
+
 .card-body {
   height: 225px;
   background-size: cover;
@@ -46,6 +51,7 @@
   position: absolute;
   bottom: 10px;
   left: 10px;
+  opacity: 0.0;
 }
 .card-description h2 {
   font-size: 20px;
@@ -55,7 +61,6 @@
 .card-description p {
   font-size: 14px;
   font-weight: lighter;
-  opacity: 0.9;
 }
 .card-link {
   position: absolute;

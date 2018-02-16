@@ -9,9 +9,7 @@ body {
   text-align: center;
 }
 .container {
-  height: 500px;
   max-width: 1000px;
-  margin: 50px auto;
 }
 
 h1, h2 {
@@ -23,7 +21,7 @@ h1, h2 {
   background-image: url("https://images.unsplash.com/photo-1506703248799-a1b1896290e8?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1600&h=900&fit=crop&s=8c2dee8c52f47e2594f0652491d58ee7");
   background-attachment: fixed;
   background-size: cover;
-  height: 850px;
+  padding-bottom: 121px;
 }
 .fluid {
   padding-top: 300px;
