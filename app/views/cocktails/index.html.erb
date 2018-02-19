@@ -12,6 +12,12 @@
   <p class="text-center color"><%= link_to 'ADD YOUR OWN COCKTAIL', new_cocktail_path %></p>
   <br>
   <div class="cards">
+    <div id="adding" class="card">
+      <%= link_to pages_favorites_path do %>
+      <i class="fas fa-heart good"></i>
+      <h3 class="fav_title">Our Favorites</h3>
+      <% end %>
+    </div>
     <% @cocktails.each do |cocktail| %>
     <%= link_to cocktail_path(cocktail) do %>
     <div class="card">
@@ -28,6 +34,7 @@
           <a href="#"><i class="fa fa-star"></i></a>
           <a href="#"><i class="fa fa-heart"></i></a>
           <a href="#"><i class="fa fa-share"></i></a>
+          <%= link_to cocktail_path(cocktail), method: :delete do %><i class="far fa-trash-alt"></i><% end %>
         </div>
       </div>
     </div>
@@ -42,5 +49,6 @@
 </div>
 <div id="scroll"></div>
 <!-- <a href="#scroll"></a> -->
+
 
 

@@ -18,8 +18,9 @@ class CocktailsController < ApplicationController
   end
 
   def destroy
-    @task.destroy
-    redirect_to tasks_path
+    @cocktail = Cocktail.find(params[:id])
+    @cocktail.destroy
+    redirect_to cocktails_path
   end
 
   private

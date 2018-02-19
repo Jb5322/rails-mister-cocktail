@@ -1,0 +1,46 @@
+
+<%= form_tag locations_path, :method => :get do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search Near", :name => nil %>
+  </p>
+<% end %>
+
+<table>
+  <tr>
+    <th>Address</th>
+    <th>Latitude</th>
+    <th>Longitude</th>
+  </tr>
+  <% for location in @locations %>
+  <tr>
+    <td>location.address</td>
+    <td>location.latitude</td>
+    <td>location.longitude</td>
+    <td><%= link_to "Show", location %></td>
+  </tr>
+  <% end %>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<% my_url = "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=15" %>
+<% @locations.each do |location| %>
+<% my_url += "&markers=#{location.latitude}%2C#{location.longitude}" %>
+<% end %>
+<%= image_tag my_url %>
